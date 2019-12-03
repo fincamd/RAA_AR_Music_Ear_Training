@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="note_F" size="1.000000 1.000000" />
-    <ImageTarget name="note_E" size="1.000000 1.000000" />
-    <ImageTarget name="note_D" size="1.000000 1.000000" />
-    <ImageTarget name="note_C" size="1.000000 1.000000" />
+    <ImageTarget name="BDiminishedChord" size="1.000000 1.000000" />
+    <ImageTarget name="AMinorChord" size="1.000000 1.000000" />
+    <ImageTarget name="GMajorChord" size="1.000000 1.000000" />
+    <ImageTarget name="FMajorChord" size="1.000000 1.000000" />
+    <ImageTarget name="EMinorChord" size="1.000000 1.000000" />
+    <ImageTarget name="DMinorChord" size="1.000000 1.000000" />
+    <ImageTarget name="CMajorChord" size="1.000000 1.000000" />
   </Tracking>
 </QCARConfig>
