@@ -64,13 +64,13 @@ public class PlayChordOnTrack : MonoBehaviour, ITrackableEventHandler {
             OnTrackingFound();
         } else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
                    newStatus == TrackableBehaviour.Status.NO_POSE) {
-            audioSource.Pause();
+            audioSource.Stop();
             OnTrackingLost();
         } else {
             // For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND
             // Vuforia is starting, but tracking has not been lost or found yet
             // Call OnTrackingLost() to hide the augmentations
-            audioSource.Pause();
+            audioSource.Stop();
             OnTrackingLost();
         }
     }

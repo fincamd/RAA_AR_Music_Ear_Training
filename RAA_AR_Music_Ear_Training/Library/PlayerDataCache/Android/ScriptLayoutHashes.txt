@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/danal/Documents/GitHub/RAA_AR_Music_Ear_Training/Apks/try6.apk
+C:/Users/danal/Documents/GitHub/RAA_AR_Music_Ear_Training/Apks/try12.apk
 SceneListBegin?
 Assets/Scenes/ChordsMode.unity
 SceneListEnd?
@@ -224,7 +224,7 @@ dff7a11839abb9fb7222280cf3c0a95a VuforiaScripts.dll:.DefaultModelRecoEventHandle
 507174d46dacbc5fe45e28485db5dd1e Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-e1862ca4d0a82470552bbef57cad61bd Assembly-CSharp.dll:.ExerciseButtonRayCasterScript
+0f43296e2bdd45161aa2c1ea0e9e9c8f Assembly-CSharp.dll:.ButtonPressedRayCaster
 df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
