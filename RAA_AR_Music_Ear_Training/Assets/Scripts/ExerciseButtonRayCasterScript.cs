@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ExerciseButtonRayCasterScript : MonoBehaviour {
 
-    private string buttonName;
     public AudioSource audioSource;
+    public GameObject correctAnswerButton;
+    public GameObject incorrectAnswerButton;
+    public Animator correctButtonAnimator;
+    public Animator incorrectButtonAnimator;
 
     // Start is called before the first frame update
     void Start() {
@@ -18,15 +21,17 @@ public class ExerciseButtonRayCasterScript : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {
-                buttonName = hit.transform.name;
-                // TODO remove
-                audioSource.Pause();
-                // boolean correct = checkIfUserAnswerIsCorrect(buttonName);
-                // if (correct) {
-                //    processCorrectAnswer();
-                //} else {
-                //     processIncorrectAnswer();
-                // }
+                string hitObjectName = hit.transform.name;
+                if (hitObjectName == correctAnswerButton.name) {
+                    // User did it!!! Yay...  Stop it.
+                    correctButtonAnimator.Play("CorrectSolutionButtonAnimation");
+                    incorrectButtonAnimator.Play("IncorrectSolutionButtonAnimation");
+                    // Play the arpeggio Major
+                } else if (hitObjectName == incorrectAnswerButton.name) {
+                    // User fucked up xd. Do smth so he notices.
+                    incorrectButtonAnimator.Play("IncorrectSolutionButtonAnimation");
+                    // Play the arpeggio Minor
+                }
             }
         }
     }

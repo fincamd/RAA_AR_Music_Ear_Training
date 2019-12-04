@@ -1,0 +1,7 @@
+Modelo acorde
+Nombre modelo acorde
+Nombres botones UI
+Tags botones UI
+Audio y acorde correcto audio source en el script de tracking
+Botones con BoxCollider
+RayCasterScript con los botones de acierto y fallo configurados
