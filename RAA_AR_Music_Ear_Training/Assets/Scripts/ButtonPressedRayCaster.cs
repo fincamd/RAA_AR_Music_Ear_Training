@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
+
+public static class Scores {
+    public static int correctAnswers = 0;
+    public static int incorrectAnswers = 0;
+}
 
 public class ButtonPressedRayCaster : MonoBehaviour {
 
     public AudioSource chordAudioSource;
-    public GameObject correctAnswerButton;
-    public GameObject incorrectAnswerButton;
-    public Animator correctButtonAnimator;
-    public Animator incorrectButtonAnimator;
+    public GameObject correctAnswerButton, incorrectAnswerButton;
+    public Animator correctButtonAnimator, incorrectButtonAnimator;
+    public Text correctAnswersCounter, incorrectAnswersCounter;
 
     // Start is called before the first frame update
     void Start() {
-
     }
 
     // Update is called once per frame
@@ -29,11 +34,17 @@ public class ButtonPressedRayCaster : MonoBehaviour {
                     incorrectButtonAnimator.Play("IncorrectSolutionButtonAnimation");
                     // Play the Major arpeggio
                     correctAnswerButton.GetComponent<AudioSource>().Play();
+                    // Increment correct score
+                    Scores.correctAnswers++;
+                    correctAnswersCounter.text = "Correct:" + Scores.correctAnswers;
                 } else if (hitObjectName == incorrectAnswerButton.name) {
-                    // User fucked up xd. Do smth so he notices.
+                    // User fucked up xd. Do sth so he notices.
                     incorrectButtonAnimator.Play("IncorrectSolutionButtonAnimation");
-                    // Play the arpeggio Minor
+                    // Play the Minor arpeggio
                     incorrectAnswerButton.GetComponent<AudioSource>().Play();
+                    // Increment incorrect answers counter
+                    Scores.incorrectAnswers++;
+                    incorrectAnswersCounter.text = "Incorrect:" + Scores.incorrectAnswers;
                 }
             }
         }
